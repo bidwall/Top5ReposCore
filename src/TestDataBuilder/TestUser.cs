@@ -1,13 +1,16 @@
-﻿namespace TestDataBuilder
+﻿using Models;
+
+namespace TestDataBuilder
 {
     public class TestUser
     {
-        public Models.User Build()
+        public User Build()
         {
-            Models.User user = new Models.User()
+            var user = new User()
             {
                 Name = "Name1"
             };
+
             return user;
         }
     }
