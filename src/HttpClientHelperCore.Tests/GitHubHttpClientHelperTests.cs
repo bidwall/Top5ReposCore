@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Linq.Expressions;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace HttpClientHelpers.Test
 {
-    [TestFixture]
     public class GitHubHttpClientHelperTests
     {
         private Mock<IHttpResponseProvider> _mockHttpReponseProvider;
         private GitHubHttpClientHelper _gitHubHttpClientHelper;
         private const string Url = "http://github.com/";
 
-        [SetUp]
-        public void TestSetup()
+        
+        public GitHubHttpClientHelperTests()
         {
             _mockHttpReponseProvider = new Mock<IHttpResponseProvider>();
             _gitHubHttpClientHelper = new GitHubHttpClientHelper(_mockHttpReponseProvider.Object);
         }
 
-        [Test]
+        [Fact]
         public void GetDataFromUrl_GiveUrl_SetsBaseAddress()
         {
             //Act
@@ -30,7 +29,7 @@ namespace HttpClientHelpers.Test
             _mockHttpReponseProvider.Verify(x => x.GetResponse<string>(It.Is(expression)), Times.Once);
         }
 
-        [Test]
+        [Fact]
         public void GetDataFromUrl_SetsRequestUriToEmptyString()
         {
             //Act
@@ -41,7 +40,7 @@ namespace HttpClientHelpers.Test
             _mockHttpReponseProvider.Verify(x => x.GetResponse<string>(It.Is(expression)), Times.Once);
         }
 
-        [Test]
+        [Fact]
         public void GetDataFromUrl_SetsAcceptsHeaders()
         {
             //Act
@@ -52,7 +51,7 @@ namespace HttpClientHelpers.Test
             _mockHttpReponseProvider.Verify(x => x.GetResponse<string>(It.Is(expression)), Times.Once);
         }
 
-        [Test]
+        [Fact]
         public void GetDataFromUrl_SetsUserAgentHeaders()
         {
             //Act
