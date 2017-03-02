@@ -7,8 +7,8 @@ namespace HttpClientHelpers.Test
 {
     public class GitHubHttpClientHelperTests
     {
-        private Mock<IHttpResponseProvider> _mockHttpReponseProvider;
-        private GitHubHttpClientHelper _gitHubHttpClientHelper;
+        private readonly Mock<IHttpResponseProvider> _mockHttpReponseProvider;
+        private readonly GitHubHttpClientHelper _gitHubHttpClientHelper;
         private const string Url = "http://github.com/";
 
         
