@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - GitHub Top 5 repos</title>
+    <link rel="stylesheet" type="text/css" href="/dist/css/site.min.css"/>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-md-4">Developed by Palvinder Bidwall</div>
+                @*TODO*@
+                @*<div class="col-md-4 text-center">@($"{ViewContext.Controller.GetType().Assembly.GetName().Version.ToString(3)}")</div>*@
+                <div class="col-md-4 text-right">&copy; @DateTime.Now.Year</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/dist/js/site.min.js"></script>
+</body>
+</html>
