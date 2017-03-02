@@ -11,8 +11,8 @@ namespace Repositories.Test
 {
     public class GitHubRepositoryTests
     {
-        private Mock<IHttpClientHelper> _mockHttpClientHelper;
-        private GitHubRepository _gitHubRepository;
+        private readonly Mock<IHttpClientHelper> _mockHttpClientHelper;
+        private readonly GitHubRepository _gitHubRepository;
 
         private const string UserName = "username";
         private const string RepoUrl = "url";
