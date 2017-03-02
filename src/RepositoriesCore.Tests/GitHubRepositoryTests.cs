@@ -5,11 +5,10 @@ using FluentAssertions;
 using HttpClientHelpers;
 using Models;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace Repositories.Test
 {
-    [TestFixture]
     public class GitHubRepositoryTests
     {
         private Mock<IHttpClientHelper> _mockHttpClientHelper;
@@ -19,14 +18,13 @@ namespace Repositories.Test
         private const string RepoUrl = "url";
         private readonly string _userUrl = $"{GitHubRepository.GitHubUri}/users/{UserName}";
         
-        [SetUp]
-        public void SetUp()
+        public GitHubRepositoryTests()
         {
             _mockHttpClientHelper = new Mock<IHttpClientHelper>();
             _gitHubRepository = new GitHubRepository(_mockHttpClientHelper.Object);
         }
 
-        [Test]
+        [Fact]
         public void GetDetailsForUser_ConstructsGitHubUrl()
         {
             //Act
@@ -36,7 +34,7 @@ namespace Repositories.Test
             _mockHttpClientHelper.Verify(x => x.GetDataFromUrl<User>(_userUrl), Times.Once);
         }
 
-        [Test]
+        [Fact]
         public void GetDetailsForUser_ReturnsUser()
         {
             //Arrange
@@ -51,7 +49,7 @@ namespace Repositories.Test
             user.Name.Should().Be(testUser.Name);
         }
 
-        [Test]
+        [Fact]
         public void GetReposForUserFromUrl_GetReposForUrl()
         {
             //Act
@@ -61,7 +59,7 @@ namespace Repositories.Test
             _mockHttpClientHelper.Verify(x => x.GetDataFromUrl<IEnumerable<Repo>>(RepoUrl), Times.Once);
         }
 
-        [Test]
+        [Fact]
         public void GetReposForUserFromUrl_ReturnsRepos()
         {
             //Arrange
