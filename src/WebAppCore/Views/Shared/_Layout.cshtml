@@ -13,8 +13,7 @@
         <footer>
             <div class="row">
                 <div class="col-md-4">Developed by Palvinder Bidwall</div>
-                @*TODO*@
-                @*<div class="col-md-4 text-center">@($"{ViewContext.Controller.GetType().Assembly.GetName().Version.ToString(3)}")</div>*@
+                <div class="col-md-4 text-center">@($"{Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationVersion}")</div>                
                 <div class="col-md-4 text-right">&copy; @DateTime.Now.Year</div>
             </div>
         </footer>
