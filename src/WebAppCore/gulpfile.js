@@ -19,7 +19,7 @@ var config = {
         src: ['bower_components/bootstrap/dist/css/bootstrap.css', 'wwwroot/css/*']
     },    
     fonts: {
-        dest: 'fonts/',
+        dest: 'wwwroot/dist/fonts/',
         src: ['bower_components/**/*.{eot,svg,ttf,woff,woff2}']
     }
 }
@@ -27,7 +27,7 @@ var config = {
 
 // tasks
 gulp.task('clean', function () {
-    return plugins.del(['wwwroot/dist/**/*', 'fonts/**/*']);
+    return plugins.del(['wwwroot/dist/**/*']);
 });
 
 gulp.task('scripts', function () {    
