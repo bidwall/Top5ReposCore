@@ -22,11 +22,8 @@ namespace WebAppCore
             Configuration = builder.Build();
         }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
             services.AddMvc();
             
             services.AddTransient<IRepository, GitHubRepository>();
@@ -35,7 +32,6 @@ namespace WebAppCore
             services.AddTransient<IHttpResponseProvider, HttpResponseProvider>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
@@ -43,10 +39,6 @@ namespace WebAppCore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
-                // Browser Link is not compatible with Kestrel 1.1.0
-                // For details on enabling Browser Link, see https://go.microsoft.com/fwlink/?linkid=840936
-                // app.UseBrowserLink();
             }
             else
             {
@@ -57,9 +49,7 @@ namespace WebAppCore
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Search}/{action=Index}/{id?}");
+                routes.MapRoute("default", "{controller=Search}/{action=Index}/{id?}");
             });
         }
     }
