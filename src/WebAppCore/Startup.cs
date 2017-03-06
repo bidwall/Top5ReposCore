@@ -28,22 +28,11 @@ namespace WebAppCore
         {
             // Add framework services.
             services.AddMvc();
-
+            
             services.AddTransient<IRepository, GitHubRepository>();
             services.AddTransient<IRepository, GitHubRepository>();
             services.AddTransient<IHttpClientHelper, GitHubHttpClientHelper>();
             services.AddTransient<IHttpResponseProvider, HttpResponseProvider>();
-
-            //services.AddMvcCore(options =>
-            //{
-            //    options.CacheProfiles.Add("SearchUsername",
-            //        new CacheProfile()
-            //        {
-            //            Duration = 600,
-            //            VaryByHeader = "username"
-            //        });
-            //});
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

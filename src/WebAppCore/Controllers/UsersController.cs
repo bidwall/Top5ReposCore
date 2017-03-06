@@ -15,8 +15,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        //[ResponseCache(Duration = 600, VaryByParam = "username")]
-        //[ResponseCache(CacheProfileName = "SearchUsername")]
+        [ResponseCache(Duration = 600)]
         public IActionResult Index(string username)
         {
             var user = _repository.GetDetailsForUser(username);
