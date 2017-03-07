@@ -5,8 +5,6 @@ obj
 bower_components
 node_modules
 
-font
-src/WebApp/Content/site\.min\.css
-
-
-src/WebApp/Scripts/site\.min\.js
+fonts
+src/WebAppCore/wwwroot/dist
+WebApplication1

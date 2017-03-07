@@ -1,0 +1,16 @@
+﻿@model WebApp.Models.SearchViewModel
+
+<div class="jumbotron background-aliceblue">
+    <h1>GitHub Top 5 repos</h1>
+    <p class="lead">Search a GitHub user's top 5 most rated repos...</p>    
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form asp-controller="Search" asp-action="Index" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="Username"/>
+            <input type="submit" value="Search" />
+        </form>
+    </div>
+</div>
