@@ -4,7 +4,4 @@ bin
 obj
 bower_components
 node_modules
-
-fonts
-src/WebAppCore/wwwroot/dist
-WebApplication1
+src/WebApp/wwwroot/dist

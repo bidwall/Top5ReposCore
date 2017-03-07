@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HttpClientHelperCore\HttpClientHelperCore.csproj" />
-    <ProjectReference Include="..\ModelsCore\ModelsCore.csproj" />
+    <ProjectReference Include="..\HttpClientHelpers\HttpClientHelpers.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
 </Project>
