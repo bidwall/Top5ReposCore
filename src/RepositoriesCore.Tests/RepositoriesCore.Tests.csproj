@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HttpClientHelperCore\HttpClientHelperCore.csproj" />
+    <ProjectReference Include="..\HttpClientHelpers\HttpClientHelpers.csproj" />
     <ProjectReference Include="..\ModelsCore\ModelsCore.csproj" />
     <ProjectReference Include="..\RepositoriesCore\RepositoriesCore.csproj" />
     <ProjectReference Include="..\TestDataBuilder\TestDataBuilder.csproj" />
