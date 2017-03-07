@@ -15,7 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HttpClientHelpers\HttpClientHelpers.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\RepositoriesCore\RepositoriesCore.csproj" />
+    <ProjectReference Include="..\Repositories\Repositories.csproj" />
     <ProjectReference Include="..\TestDataBuilder\TestDataBuilder.csproj" />
   </ItemGroup>
 
