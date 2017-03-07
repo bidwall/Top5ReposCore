@@ -16,7 +16,7 @@
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
     <ProjectReference Include="..\TestDataBuilder\TestDataBuilder.csproj" />
-    <ProjectReference Include="..\WebAppCore\WebAppCore.csproj" />
+    <ProjectReference Include="..\WebApp\WebApp.csproj" />
   </ItemGroup>
 
   <ItemGroup>
