@@ -1,5 +1,5 @@
-Top5Repos 
----------
+Top5ReposCore 
+-------------
 Forked from [Top5Repos](https://github.com/bidwall/Top5Repos), welcome Top5ReposCore!
 
 This is an ASP.NET Core web application which lists the top five starred GitHub repositories, alongside some basic information for a given user.
