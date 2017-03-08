@@ -1,4 +1,7 @@
 ﻿/// <binding AfterBuild='default' Clean='clean' />
+
+"use strict";
+
 var gulp = require('gulp');
 var plugins = require("gulp-load-plugins")({
   pattern: ['gulp-*', 'gulp.*', 'main-bower-files', 'del'],
@@ -17,17 +20,18 @@ var config = {
         bundle: 'site.min.css',
         dest: 'wwwroot/dist/css/',
         src: ['bower_components/bootstrap/dist/css/bootstrap.css', 'wwwroot/css/*']
-    },    
+    },
     fonts: {
         dest: 'wwwroot/dist/fonts/',
         src: ['bower_components/**/*.{eot,svg,ttf,woff,woff2}']
-    }
+    },
+    distribution: 'wwwroot/dist/**/*'
 }
 
 
 // tasks
 gulp.task('clean', function () {
-    return plugins.del(['wwwroot/dist/**/*']);
+    return plugins.del([config.distribution]);
 });
 
 gulp.task('scripts', function () {    
