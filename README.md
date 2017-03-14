@@ -16,4 +16,21 @@ This solution uses...
 - FluentAssertions
 - gulp
 
-To use:- restore nuget packages, install npm packages, install bower packages and run gulpfile to minify css/js & setup fonts.
+Install
+------------
+
+Restore nuget packages
+
+`dotnet restore`
+
+Restore npm packages
+
+`npm install`
+
+Restore bower packages
+
+`bower install`
+
+Restore static resources (minified css/js & bootstrap fonts)
+
+`gulp`
